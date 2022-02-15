@@ -5,19 +5,16 @@ Dockerfile:
 ```Dockerfile
 FROM ubuntu:latest
 
-ENTRYPOINT /bin/bash
-
 CMD while true; do echo 'Hello world'; sleep 1; done
 ```
 
-Now, we will try to add some code to the image. The `ubuntu` image comes with `bash` preinstalled and by default uses `bash` as the entrypoint when you run the image. Here, we have included the `ENTRYPOINT` command for clarity and so you can understand what happens. But actually, it is not necessary.
+Now, we will try to add some code to the image. The `ubuntu` image comes with `bash` preinstalled and by default uses `bash` as the entrypoint when you run the image. You can see this in the [Dockerfile](https://github.com/tianon/docker-brew-ubuntu-core/blob/8984e91c47abd923cf214fb7232b044106b39337/xenial/Dockerfile#L47) behind the Ubuntu.
 
-The next line after `ENTRYPONT` begins with `CMD`. This is the argument passed to whatever executable is listed under the entrypoint. In combination,
-the two commands mean that the following will be executed by Docker when it run the image in a container:
+Essentially what happens when you run the image is the following:
 
-- Run container
-- Start `bash`
-- Run the command `while true; do echo 'Hello world'; sleep 1; done` (forever)
+- Start the container
+- Run `bash`
+- Execute the command `while true; do echo 'Hello world'; sleep 1; done` (forever)
 
 You can try to type the following in your computer's terminal, assuming you're running Mac OS X or Linux:
 
