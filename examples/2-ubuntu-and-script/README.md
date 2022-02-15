@@ -8,7 +8,7 @@ FROM ubuntu:latest
 CMD while true; do echo 'Hello world'; sleep 1; done
 ```
 
-Now, we will try to add some code to the image. The `ubuntu` image comes with `bash` preinstalled and by default uses `bash` as the entrypoint when you run the image. You can see this in the [Dockerfile](https://github.com/tianon/docker-brew-ubuntu-core/blob/8984e91c47abd923cf214fb7232b044106b39337/xenial/Dockerfile#L47) behind the Ubuntu.
+Now, we will try to add some code to the image. The `ubuntu` image comes with `bash` preinstalled and by default executes `bash` when you run the image. You can confirm this by looking at the [Dockerfile](https://github.com/tianon/docker-brew-ubuntu-core/blob/8984e91c47abd923cf214fb7232b044106b39337/xenial/Dockerfile#L47) behind the Ubuntu.
 
 Essentially what happens when you run the image is the following:
 
