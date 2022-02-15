@@ -36,4 +36,4 @@ Check that it's gone, by rerunning the `docker images` command from before:
 docker images | grep hello-docker-scratch
 ```
 
-[Next](../examples/1-ubuntu-only/)
+[Next](../1-ubuntu-only/)
