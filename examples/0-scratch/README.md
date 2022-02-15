@@ -18,7 +18,7 @@ Build the image
 docker build -t hello-docker-scratch .
 ```
 
-You can see you image with the `docker images` command:
+Now, you will be able to see your newly-built image with the `docker images` command:
 
 ```bash
 docker images | grep hello-docker-scratch
@@ -30,7 +30,7 @@ You can remove the image from your system with the `docker rmi command`:
 docker rmi hello-docker-scratch
 ```
 
-Rerun the `docker images` command to see that it is gone:
+Check that it's gone, by rerunning the `docker images` command from before:
 
 ```bash
 docker images | grep hello-docker-scratch
