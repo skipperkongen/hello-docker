@@ -1,6 +1,6 @@
 # Ubuntu and script
 
-A very simple Dockerfile based on Ubuntu:
+Dockerfile:
 
 ```Dockerfile
 FROM ubuntu:latest
